@@ -414,10 +414,11 @@
   <!-- Screenshot Carousel -->
   <div class="carousel-wrapper">
     <div class="carousel-track" id="carouselTrack">
-      <div class="carousel-slide"><img src="screenshot1.png" alt="Markdown Export Screenshot 1"/></div>
-      <div class="carousel-slide"><img src="screenshot2.png" alt="Markdown Export Screenshot 2"/></div>
-      <div class="carousel-slide"><img src="screenshot3.png" alt="Markdown Export Screenshot 3"/></div>
-      <div class="carousel-slide"><img src="screenshot4.png" alt="Markdown Export Screenshot 4"/></div>
+      <img class="carousel-img" src="screenshot1.png" alt="Markdown Export Screenshot 1"/>
+      <img class="carousel-img" src="screenshot2.png" alt="Markdown Export Screenshot 2"/>
+      <img class="carousel-img" src="screenshot3.png" alt="Markdown Export Screenshot 3"/>
+      <img class="carousel-img" src="screenshot4.png" alt="Markdown Export Screenshot 4"/>
+      <img class="carousel-img" src="screenshot5.png" alt="Markdown Export Screenshot 5"/>
     </div>
     <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
@@ -430,6 +431,7 @@
       <span class="dot" onclick="goToSlide(1)"></span>
       <span class="dot" onclick="goToSlide(2)"></span>
       <span class="dot" onclick="goToSlide(3)"></span>
+      <span class="dot" onclick="goToSlide(4)"></span>
     </div>
   </div>
 </section>
@@ -634,7 +636,7 @@
 
 <script>
   let current = 0;
-  const total = 4;
+  const total = 5;
   let autoTimer = setInterval(() => moveCarousel(1), 3500);
 
   function moveCarousel(dir) {
@@ -650,16 +652,15 @@
   }
 
   function updateCarousel() {
-    document.getElementById('carouselTrack').style.transform = `translateX(-${current * 100}%)`;
+    const track = document.getElementById('carouselTrack');
+    const imgW = track.querySelector('.carousel-img').offsetWidth;
+    track.style.transform = `translateX(-${current * imgW}px)`;
     document.querySelectorAll('.carousel-dots .dot').forEach((d, i) => {
       d.classList.toggle('active', i === current);
     });
   }
 
-  function resetTimer() {
-    clearInterval(autoTimer);
-    autoTimer = setInterval(() => moveCarousel(1), 3500);
-  }
+  window.addEventListener('resize', () => updateCarousel());
 </script>
 
 </body>
