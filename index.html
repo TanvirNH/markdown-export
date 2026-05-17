@@ -527,7 +527,6 @@
       <img class="carousel-img" src="screenshot2.png" alt="Exporting a document to PDF" loading="lazy" />
       <img class="carousel-img" src="screenshot3.png" alt="Exporting a document to Word" loading="lazy" />
       <img class="carousel-img" src="screenshot4.png" alt="Advanced styling and font controls" loading="lazy" />
-      <img class="carousel-img" src="screenshot5.png" alt="Dark mode editor view" loading="lazy" />
     </div>
     <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)" aria-label="Previous screenshot">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
@@ -540,7 +539,6 @@
       <button class="dot" onclick="goToSlide(1)" aria-label="Screenshot 2"></button>
       <button class="dot" onclick="goToSlide(2)" aria-label="Screenshot 3"></button>
       <button class="dot" onclick="goToSlide(3)" aria-label="Screenshot 4"></button>
-      <button class="dot" onclick="goToSlide(4)" aria-label="Screenshot 5"></button>
     </div>
   </div>
 </section>
@@ -741,7 +739,7 @@
 <script>
   (function(){
     let current = 0;
-    const total = 5;
+    const total = 4;
     let autoTimer = setInterval(() => moveCarousel(1), 4000);
 
     window.moveCarousel = function(dir) {
