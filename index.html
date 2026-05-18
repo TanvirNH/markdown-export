@@ -7,9 +7,9 @@
   <meta name="color-scheme" content="dark" />
 
   <!-- Primary SEO -->
-  <title>Markdown Export for Mac — Convert Markdown to PDF, Word & PNG</title>
-  <meta name="description" content="Markdown Export is a native Mac app that converts Markdown to beautifully formatted PDF, Word (.doc), and PNG files. Live preview, advanced styling, page breaks, and dark mode. Available on the Mac App Store." />
-  <meta name="keywords" content="markdown export mac, markdown to pdf mac, markdown to word mac, markdown to png, markdown converter mac, md to pdf, markdown editor mac, mac app store markdown, markdown export app" />
+  <title>Markdown Export for Mac — PDF, DOCX, ePub, HTML & PNG</title>
+  <meta name="description" content="Native Mac app that turns Markdown into beautifully formatted PDF, real DOCX, ePub 3.0, HTML, and PNG documents. Live preview, KaTeX math, Mermaid diagrams, 12 export themes, and batch folder export. Available on the Mac App Store." />
+  <meta name="keywords" content="markdown export mac, markdown to pdf mac, markdown to docx, markdown to epub, markdown to html, markdown to png, markdown converter mac, md to pdf, markdown editor mac, katex mac, mermaid diagrams, mac app store markdown" />
   <meta name="author" content="Tanvir N Hasan" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <meta name="googlebot" content="index, follow" />
@@ -18,8 +18,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Markdown Export" />
-  <meta property="og:title" content="Markdown Export for Mac — Convert Markdown to PDF, Word & PNG" />
-  <meta property="og:description" content="Turn Markdown into polished PDFs, Word documents, and PNG images — with live preview and advanced styling. Built for Mac." />
+  <meta property="og:title" content="Markdown Export for Mac — PDF, DOCX, ePub, HTML & PNG" />
+  <meta property="og:description" content="Turn Markdown into polished PDFs, real DOCX, ePub books, HTML, and PNG images — with live preview, math, diagrams, and 12 themes. Built for Mac." />
   <meta property="og:url" content="https://tanvirnh.github.io/markdown-export/" />
   <meta property="og:image" content="https://tanvirnh.github.io/markdown-export/screenshot1.png" />
   <meta property="og:image:alt" content="Markdown Export app on macOS showing live preview and export options" />
@@ -27,8 +27,8 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Markdown Export for Mac — Convert Markdown to PDF, Word & PNG" />
-  <meta name="twitter:description" content="Native Mac app that converts Markdown to PDF, Word, and PNG with live preview and advanced styling." />
+  <meta name="twitter:title" content="Markdown Export for Mac — PDF, DOCX, ePub, HTML & PNG" />
+  <meta name="twitter:description" content="Native Mac app that converts Markdown to PDF, real DOCX, ePub, HTML, and PNG with math, diagrams, and 12 themes." />
   <meta name="twitter:image" content="https://tanvirnh.github.io/markdown-export/screenshot1.png" />
 
   <!-- Apple / Icons -->
@@ -50,22 +50,30 @@
     "applicationCategory": "ProductivityApplication",
     "url": "https://tanvirnh.github.io/markdown-export/",
     "downloadUrl": "https://apps.apple.com/ca/app/markdown-export/id6757321464?mt=12",
-    "description": "Convert Markdown to beautifully formatted PDF, Word, and PNG files with live preview, advanced styling, and dark mode. Native Mac app.",
+    "description": "Convert Markdown to PDF, real DOCX, ePub 3.0, HTML, and PNG with live preview, KaTeX math, Mermaid diagrams, and 12 export themes. Native Mac app.",
     "author": { "@type": "Person", "name": "Tanvir N Hasan" },
     "offers": [
       { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Free (5 exports)" },
+      { "@type": "Offer", "price": "4.99", "priceCurrency": "USD", "name": "Pro Monthly" },
       { "@type": "Offer", "price": "14.99", "priceCurrency": "USD", "name": "Pro Yearly" },
       { "@type": "Offer", "price": "24.99", "priceCurrency": "USD", "name": "Lifetime" }
     ],
     "featureList": [
       "Export Markdown to PDF",
-      "Export Markdown to Word (.doc)",
+      "Export Markdown to real DOCX (Office Open XML)",
+      "Export Markdown to ePub 3.0",
+      "Export Markdown to HTML",
       "Export Markdown to PNG",
-      "Live preview",
-      "Advanced styling controls",
+      "Live preview with KaTeX math",
+      "Mermaid diagrams",
+      "12 export themes",
+      "20+ premium fonts",
+      "Batch folder export",
+      "Paper size and margin presets",
       "Dark mode",
-      "Split-view editor",
-      "Intelligent image loading"
+      "Split-view editor with page-break visualization",
+      "Intelligent image loading",
+      "Focus mode"
     ]
   }
   </script>
@@ -311,7 +319,7 @@
     /* ── FORMATS ── */
     .formats { background: var(--surface); }
     .formats-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
     }
     .format-card {
       background: var(--bg); border: 1px solid var(--border);
@@ -369,8 +377,8 @@
 
     /* ── PRICING ── */
     .pricing-cards {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+      max-width: 1120px; margin: 0 auto;
     }
     .pricing-card {
       background: var(--surface); border: 1px solid var(--border);
@@ -444,6 +452,9 @@
     }
 
     /* ── RESPONSIVE ── */
+    @media screen and (min-width: 961px) {
+      .formats-grid { grid-template-columns: repeat(5, 1fr); }
+    }
     @media screen and (max-width: 960px) {
       .formats-grid, .usecases-grid, .pricing-cards { grid-template-columns: 1fr 1fr; }
     }
@@ -502,12 +513,14 @@
     <span class="grad">Polished Documents</span>
   </h1>
   <p class="hero-sub">
-    Export your markdown as professional PDFs, Word documents, and PNG images — with live preview, advanced styling, and beautiful results every time.
+    Export your markdown as professional PDFs, real Word documents, ePub books, HTML, and PNG — with live preview, math, diagrams, and 12 typeset themes.
   </p>
   <div class="format-pills" role="list">
-    <div class="pill pill-pdf" role="listitem"><span class="dot" aria-hidden="true"></span> PDF Export</div>
-    <div class="pill pill-word" role="listitem"><span class="dot" aria-hidden="true"></span> Word (.doc)</div>
-    <div class="pill pill-png" role="listitem"><span class="dot" aria-hidden="true"></span> PNG Image</div>
+    <div class="pill pill-pdf" role="listitem"><span class="dot" aria-hidden="true"></span> PDF</div>
+    <div class="pill pill-word" role="listitem"><span class="dot" aria-hidden="true"></span> Real DOCX</div>
+    <div class="pill" role="listitem" style="border-color:rgba(167,139,250,0.3);"><span class="dot" style="background:var(--accent-2);" aria-hidden="true"></span> ePub 3.0</div>
+    <div class="pill" role="listitem" style="border-color:rgba(108,99,255,0.3);"><span class="dot" style="background:var(--accent);" aria-hidden="true"></span> HTML</div>
+    <div class="pill pill-png" role="listitem"><span class="dot" aria-hidden="true"></span> PNG</div>
   </div>
   <div class="hero-actions">
     <a href="https://apps.apple.com/ca/app/markdown-export/id6757321464?mt=12" class="btn-primary" target="_blank" rel="noopener">
@@ -547,23 +560,33 @@
 <section class="formats" id="formats" aria-labelledby="formats-title">
   <div class="container">
     <p class="section-label">Export Formats</p>
-    <h2 class="section-title" id="formats-title">One App. Three Formats.</h2>
-    <p class="section-sub">Professional-grade rendering for every document type you need.</p>
+    <h2 class="section-title" id="formats-title">One App. Five Formats.</h2>
+    <p class="section-sub">Professional-grade rendering for every document type you need — all on-device.</p>
     <div class="formats-grid">
       <article class="format-card">
         <div class="format-icon" style="background: rgba(255,107,107,0.12); border: 1px solid rgba(255,107,107,0.25);" aria-hidden="true">📄</div>
         <h3>PDF</h3>
-        <p>Pixel-perfect PDF output with full typography control. Ideal for reports, CVs, and professional documents.</p>
+        <p>Pixel-perfect multi-page PDFs with paginated layout, full typography, and bundled math and diagrams.</p>
       </article>
       <article class="format-card">
         <div class="format-icon" style="background: rgba(56,189,248,0.12); border: 1px solid rgba(56,189,248,0.25);" aria-hidden="true">📝</div>
-        <h3>Word (.doc)</h3>
-        <p>Fully editable Word documents ready to share with colleagues who don't use Markdown.</p>
+        <h3>Real DOCX</h3>
+        <p>Native Office Open XML — not HTML in disguise. Open in Word, Pages, or Google Docs with formatting intact.</p>
+      </article>
+      <article class="format-card">
+        <div class="format-icon" style="background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.25);" aria-hidden="true">📚</div>
+        <h3>ePub 3.0</h3>
+        <p>Standards-compliant ebooks ready for Apple Books, Kindle Previewer, or any modern reader.</p>
+      </article>
+      <article class="format-card">
+        <div class="format-icon" style="background: rgba(108,99,255,0.12); border: 1px solid rgba(108,99,255,0.25);" aria-hidden="true">🌐</div>
+        <h3>HTML</h3>
+        <p>Self-contained styled HTML — a single file you can email, host, or archive without external assets.</p>
       </article>
       <article class="format-card">
         <div class="format-icon" style="background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.25);" aria-hidden="true">🖼️</div>
         <h3>PNG Image</h3>
-        <p>High-quality image exports — perfect for sharing on social media, embedding in presentations, or archiving.</p>
+        <p>High-resolution image exports for social media, slide decks, or quick visual share — free for everyone.</p>
       </article>
     </div>
   </div>
@@ -580,42 +603,56 @@
         <div class="feature-icon" aria-hidden="true">⚡</div>
         <div>
           <h4>Live Preview</h4>
-          <p>See your document update in real-time as you type. No refresh needed — what you see is what you export.</p>
+          <p>Your document updates in real time as you type — math, diagrams, code, and tables all rendered inline.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">∑</div>
+        <div>
+          <h4>Math &amp; Diagrams</h4>
+          <p>Beautiful KaTeX equations (<code>$...$</code>, <code>$$...$$</code>) and Mermaid flowcharts from fenced code blocks.</p>
         </div>
       </div>
       <div class="feature-item">
         <div class="feature-icon" aria-hidden="true">🎨</div>
         <div>
-          <h4>Advanced Styling Controls</h4>
-          <p>Customize font face and text size to match your exact preferences and brand guidelines.</p>
+          <h4>12 Built-in Themes</h4>
+          <p>Whitepaper, Report, Technical Docs, Minimal, Book, Letterhead, Resume — grouped by category for fast switching.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">📦</div>
+        <div>
+          <h4>Batch Export</h4>
+          <p>Drop a folder of <code>.md</code> files onto the window and the Pro batch runner converts every one in a single pass.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">📐</div>
+        <div>
+          <h4>Paper &amp; Margins</h4>
+          <p>US Letter, A4, US Legal with three margin presets — pick the page geometry once and every export respects it.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">🔤</div>
+        <div>
+          <h4>20+ Premium Fonts</h4>
+          <p>Curated sans, serif, and mono families — SF Pro, New York, Charter, Optima, Hoefler Text, Menlo, and more.</p>
         </div>
       </div>
       <div class="feature-item">
         <div class="feature-icon" aria-hidden="true">🌙</div>
         <div>
-          <h4>Dark Mode Support</h4>
-          <p>Switch between light and dark modes for comfortable editing any time of day.</p>
-        </div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon" aria-hidden="true">📁</div>
-        <div>
-          <h4>File Management</h4>
-          <p>Open existing <code>.md</code> files or start from scratch with an intuitive built-in text editor.</p>
+          <h4>Dark Mode &amp; Focus</h4>
+          <p>Comfortable day-or-night editing with persisted preferences plus a focus mode that expands the editor full-window.</p>
         </div>
       </div>
       <div class="feature-item">
         <div class="feature-icon" aria-hidden="true">🖼️</div>
         <div>
           <h4>Intelligent Image Loading</h4>
-          <p>All images load completely before export, ensuring perfect quality with zero missing assets.</p>
-        </div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon" aria-hidden="true">📐</div>
-        <div>
-          <h4>Split-View Editor</h4>
-          <p>Editor and preview side-by-side with page break visualization for precise document planning.</p>
+          <p>All images finish loading before export fires — no missing assets, no half-rendered pages, every single time.</p>
         </div>
       </div>
     </div>
@@ -673,27 +710,40 @@
       <article class="pricing-card">
         <p class="pricing-label">Free</p>
         <p class="pricing-price">$0</p>
-        <p class="pricing-period">Forever free</p>
+        <p class="pricing-period">5 lifetime exports</p>
         <ul class="pricing-perks">
-          <li class="active"><span class="check">✓</span> 5 exports included</li>
-          <li class="active"><span class="check">✓</span> PDF, Word, PNG formats</li>
-          <li class="active"><span class="check">✓</span> Live preview</li>
-          <li><span style="color:var(--muted)">—</span> Unlimited exports</li>
+          <li class="active"><span class="check">✓</span> PDF and PNG export</li>
+          <li class="active"><span class="check">✓</span> Live preview with math &amp; diagrams</li>
+          <li class="active"><span class="check">✓</span> Default theme + free fonts</li>
+          <li><span style="color:var(--muted)">—</span> DOCX, ePub, HTML</li>
+          <li><span style="color:var(--muted)">—</span> 12 themes &amp; 20+ fonts</li>
         </ul>
         <a href="https://apps.apple.com/ca/app/markdown-export/id6757321464?mt=12" class="pricing-btn ghost" target="_blank" rel="noopener">Download Free</a>
       </article>
+      <article class="pricing-card">
+        <p class="pricing-label">Pro Monthly</p>
+        <p class="pricing-price">$4.99</p>
+        <p class="pricing-period">per month · cancel anytime</p>
+        <ul class="pricing-perks">
+          <li class="active"><span class="check">✓</span> Unlimited exports</li>
+          <li class="active"><span class="check">✓</span> DOCX, ePub, HTML unlocked</li>
+          <li class="active"><span class="check">✓</span> 12 themes &amp; 20+ fonts</li>
+          <li class="active"><span class="check">✓</span> Batch folder export</li>
+          <li class="active"><span class="check">✓</span> Paper &amp; margin presets</li>
+        </ul>
+        <a href="https://apps.apple.com/ca/app/markdown-export/id6757321464?mt=12" class="pricing-btn ghost" target="_blank" rel="noopener">Subscribe — $4.99/mo</a>
+      </article>
       <article class="pricing-card featured">
-        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-badge">Best Value</div>
         <p class="pricing-label">Pro Yearly</p>
         <p class="pricing-price">$14.99</p>
         <p class="pricing-period">per year · ~$1.25/month</p>
         <ul class="pricing-perks">
-          <li class="active"><span class="check">✓</span> Unlimited exports</li>
-          <li class="active"><span class="check">✓</span> PDF, Word, PNG formats</li>
-          <li class="active"><span class="check">✓</span> Live preview</li>
-          <li class="active"><span class="check">✓</span> Advanced styling controls</li>
+          <li class="active"><span class="check">✓</span> Everything in Monthly</li>
+          <li class="active"><span class="check">✓</span> Save ~75% vs Monthly</li>
+          <li class="active"><span class="check">✓</span> All future Pro updates</li>
         </ul>
-        <a href="https://apps.apple.com/ca/app/markdown-export/id6757321464?mt=12" class="pricing-btn" target="_blank" rel="noopener">Get Pro — $14.99/yr</a>
+        <a href="https://apps.apple.com/ca/app/markdown-export/id6757321464?mt=12" class="pricing-btn" target="_blank" rel="noopener">Get Yearly — $14.99/yr</a>
       </article>
       <article class="pricing-card">
         <p class="pricing-label">Lifetime</p>
@@ -701,12 +751,11 @@
         <p class="pricing-period">one-time payment</p>
         <ul class="pricing-perks">
           <li class="active"><span class="check">✓</span> Unlimited exports forever</li>
-          <li class="active"><span class="check">✓</span> PDF, Word, PNG formats</li>
-          <li class="active"><span class="check">✓</span> Live preview</li>
-          <li class="active"><span class="check">✓</span> Advanced styling controls</li>
-          <li class="active"><span class="check">✓</span> All future updates</li>
+          <li class="active"><span class="check">✓</span> All Pro features</li>
+          <li class="active"><span class="check">✓</span> All future Pro updates</li>
+          <li class="active"><span class="check">✓</span> No subscription, ever</li>
         </ul>
-        <a href="https://apps.apple.com/ca/app/markdown-export/id6757321464?mt=12" class="pricing-btn ghost" target="_blank" rel="noopener">Get Lifetime Access</a>
+        <a href="https://apps.apple.com/ca/app/markdown-export/id6757321464?mt=12" class="pricing-btn ghost" target="_blank" rel="noopener">Buy Lifetime — $24.99</a>
       </article>
     </div>
   </div>
